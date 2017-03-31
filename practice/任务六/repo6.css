@@ -1,0 +1,366 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.wraper{
+	width: 980px;
+	height: 1386px;
+	margin: 0 auto;
+	border:1px solid red;
+}
+header,article{
+	width: 892px;
+	margin: 0 auto;
+}
+/*顶部样式*/
+header{
+	font-family: 黑体,SimHei;
+	font-size: 12px;
+	position: relative;
+	border-bottom: 2px solid #938e8c;
+	margin-bottom: 35px;
+}
+.head-left{
+	display: inline-block;
+	width: 110px;
+	height: 61px;
+	background: #ff7575;
+	position: relative;
+}
+.head-left-text{
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+}
+.date{
+	position: absolute;
+	bottom: 4px;
+	right: 0;
+	display: inline-block;
+	color: #d45d5c;
+}
+/*第一部分左侧*/
+.first-sec{
+	overflow: hidden;
+	width: 100%;
+}
+.first-sec .left-bg{
+	float: left;
+	width: 641px;
+	height: 301px;
+	background: url(images/left-bg.jpg);
+	background-size: 100%;
+}
+.first-sec .mask{
+	width: 191px;
+	height: 301px;
+}
+.first-sec .left-mask{
+	float: left;
+	background-color: rgba(127,255,212,0.5);
+}
+.first-sec .right-mask{
+	float: right;
+	background-color: rgba(178,34,34,0.5);
+}
+/*第一部分右侧*/
+.first-sec .right-content{
+	float: right;
+	margin-left: 42px;
+	width: 203px;
+	height: 301px;
+	border-top: 2px solid #cc8091;
+}
+.about,.technologe{
+	font-size: 24px;
+	font-family: 微软雅黑,Microsoft YaHei;
+	color: #000;
+	text-decoration: underline;
+	line-height: 40px;
+}
+.right-content .content{
+	font-size: 12px;
+	font-family: 楷体,KaiTi;
+	color: #676767;
+	line-height: 10px;
+}
+.right-log{
+	font-size: 116px;
+	font-family: 微软雅黑,Microsoft YaHei;
+	color: #75b86b;
+	font-style: italic;
+	margin-left: -17px;
+}
+.right-bottom{
+	display: inline-block;
+	font-size: 55px;
+	font-family: 微软雅黑,Microsoft YaHei;
+	color: #cc8091;
+}
+.second{
+	display: inline-block;
+	font-size: 21px;
+}
+.third{
+	display: block;
+	font-size: 12px;
+}
+.totop{
+	margin-top: -15px;
+}
+
+/*第二部分*/
+.second-sec{
+	overflow: hidden;
+	margin-top: 20px;
+}
+.public{
+	float: left;
+	margin-right: 20px;
+}
+.left{
+	width: 230px;
+}
+.left h3{
+	font-size: 16px;
+	font-family: 微软雅黑,Microsoft YaHei;
+	color: #418c59;
+	font-weight: bold;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+.left p{
+	font-size: 12px;
+	font-family: 宋体,SimSun;
+	color: #767777;
+	line-height: 16px;
+}
+.middle{
+	width: 210px;
+}
+.middle h3{
+	font-size: 16px;
+	color: #d2994f;
+	font-weight: bold;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+.middle p{
+	font-size: 12px;
+	font-family: 微软雅黑,Microsoft YaHei;
+	color: #231815;
+	line-height: 16px;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+.right{
+	width: 150px;
+}
+.right h3{
+	font-size: 16px;
+	color: #cc7680;
+	font-weight: bold;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+.right span{
+	font-size: 12px;
+	font-family: 微软雅黑,Microsoft YaHei;
+	color: #cd4a48;
+	line-height: 16px;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+
+/*第三部分*/
+.third-sec{
+	/*overflow: hidden;*/
+	margin-top: 50px;
+}
+.third-sec .last-left-content{
+	width: 415px;
+	float: left;
+}
+.third-sec .head{
+	border-bottom: 2px solid #11456b;
+}
+.third-sec h2 span{
+	font-size: 72px;
+	line-height: 72px;
+	font-family: 黑体,SimHei;
+	color: #f5e327;
+	font-weight: bold;
+	font-style: italic;
+}
+.third-sec  h2{
+	font-size: 42px;
+	font-family: 黑体,SimHei;
+	color: #11456b;
+	font-weight: bold;
+	line-height: 16px;
+}
+.third-sec h3{
+	font-size: 33px;
+	line-height: 33px;
+	font-family: 黑体,SimHei;
+	color: #11456b;
+	font-weight: bold;
+	margin: 15px 0;
+}
+.third-sec .last-left-content p span{
+	float: left;
+	margin-right: 10px;
+	line-height: 70px;
+	font-size: 70px;
+	font-family: 微软雅黑,Microsoft YaHei;
+	color: #f5e327;
+}
+.third-sec p{
+	font-size: 12px;
+	font-family: 宋体,SimSun;
+	color: #767777;
+	line-height: 16px;
+	margin-top: 20px;
+}
+.third-sec .last-left-content .picture{
+	float: right;
+	width: 165px;
+	height: 290px;
+	background: url(images/left.jpg);
+	background-size: 100%;
+}
+/*右半部分*/
+.last-right-content{
+	float: right;
+}
+.top-pic{
+	width: 458px;
+	height: 275px;
+	background: url(images/right-1.jpg);
+	background-size: 100%;
+	position: relative;
+}
+.last-mask{
+	width: 458px;
+	height: 61px;
+	line-height: 61px;
+	background: rgba(135,135,135,0.5);
+	position: absolute;
+	bottom: 0;
+}
+.last-mask .first{
+	font-size: 26px;
+	font-family: 微软雅黑,Microsoft YaHei;
+	color: #fff;
+	height: 44px;
+	margin-left: 35px;
+	padding-left: 15px;
+	border-left: 3px solid #72b16a;
+}
+.last-mask .next{
+	font-size: 12px;
+	font-family: 微软雅黑,Microsoft YaHei;
+	color: #72b16a;
+	font-style: italic;
+	letter-spacing: 140%;
+}
+/*下半部分*/
+.bottom{
+	position: relative;
+	width: 459px;
+	height: 318px;
+	background: #FFFFB9;
+	margin-top: 30px;
+	padding: 20px;
+}
+.bottom p{
+	font-size: 16px;
+	font-family: 宋体,SimSun;
+	color: #5a5b5b;
+	line-height: 20px;
+	margin-left: 0;
+}
+/*引入图标*/
+.bottom .head-span{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-width: 0 5px 5px;
+	border-style: solid;
+	border-color: transparent transparent #6A6AFF;
+	margin-right: 8px;
+}
+.bottom .foot-span{
+	font-size: 12px;
+	font-family: 宋体,SimSun;
+	color: #5a5b5b;
+	font-style: italic;
+	line-height: 20px;
+	margin-right: 0;
+}
+.count{
+	position: relative;
+	margin-top: 14px;
+	width: 260px;
+	height: 160px;
+	background-color: #FF9797;
+	color: #fff;
+	padding-left: 10px;
+}
+.count .span1{
+	font-size: 110px;
+	font-family: 微软雅黑,Microsoft YaHei;
+}
+.count .span2{
+	display: inline-block;
+	width: 2px;
+	height: 86px;
+	background: #fff;
+}
+.div1{
+	font-size: 21px;
+	font-family: 黑体,SimHei;
+	font-style: italic;
+	line-height: 24px;
+	position: absolute;
+	top: 25%;
+	left: 35%;
+}
+.div1 div{
+	font-size: 12px;
+	font-family: 黑体,SimHei;
+	line-height: 12px;
+}
+
+.word{
+	width: 165px;
+	position: absolute;
+	right: 0;
+	bottom: 40px;
+	font-size: 14px;
+	font-family: 黑体,SimHei;
+	font-family: italic;
+	line-height: 16px;
+	text-indent: 2em;
+}
+/*底部*/
+article{
+	overflow: hidden;
+}
+footer{
+	width: 892px;
+	height: 50px;
+	margin: 30px auto;
+	border-top: 1px solid #938e8c;
+	clear: both;
+}
+footer span{
+	float: right;
+	font-size: 12px;
+	font-family: 黑体,SimHei;
+	color: #d45d5c;
+}
+
+
