@@ -1,0 +1,350 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+html,body{
+	height: 100%
+}
+.wraper{
+	max-width: 610px;
+	min-width: 290px;
+	min-height: 525px;
+	position: relative;
+	border: 1px solid #d0d0d0;
+}
+/******移动区域*******/
+#right{
+	width: 10px;
+	height: 100%;
+	position: absolute;
+	right: -5px;
+	cursor: e-resize;
+}
+#bottom{
+	width: 100%;
+	height: 10px;
+	position: absolute;
+	bottom: -5px;
+	cursor: s-resize;
+}
+/*********头部**********/
+header{
+	width: 100%;
+	height: 150px;
+	background-color: #6A6AFF;
+}
+header .top-right{
+	float: right;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+header .top-right .item{
+	display: inline-block;
+}
+header .top-right li a{
+	display: block;
+	padding: 5px;
+}
+header .top-right li a:hover{
+	background-color: #fff;
+}
+/***头部中部***/
+header .info{
+	clear: both;
+	height: 65px;
+	padding: 0 70px;
+}
+header .info .picture{
+	float: left;
+	margin-left: -60px;
+}
+header .info .picture a{
+	display: block;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background: url(images/head-pic.png) no-repeat;
+	background-size: cover;
+}
+header .info .picture a:hover{
+	border: 1px solid blue;
+}
+header .info .weather{
+	width: 65px;
+	height: 65px;
+	float: right;
+	margin-right: -60px;
+	background: url(images/weather.png) no-repeat;
+	background-size: cover;
+}
+header .info .details{
+	width: 100%;
+	height: 70px;
+	padding: 0 10px;
+	line-height: 20px;
+	font-size: 12px;
+	position: relative;
+}
+header .info .details a{
+	display: inline-block;
+}
+/**状态图标***/
+header .info .details .station{
+	width: 20px;
+	height: 15px;
+	line-height: 15px;
+	margin-bottom: -3px;
+	background-image: url(images/status/status1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+header .info .details .station-list{
+	width: 100px;
+	height: 150px;
+	background-color: #fff;
+	border: 1px solid #BEBEBE;
+	position: absolute;
+	z-index: 999;
+	left: 70px;
+	top: 20px;
+	display: none;
+}
+header .info .station-list li{
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	padding-left: 30px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+header .info .station-list .item1{
+	background-image: url(images/status/status1.png);	
+}
+header .info .station-list .item2{
+	background-image: url(images/status/status2.png);
+}
+header .info .station-list .item3{
+	background-image: url(images/status/status3.png);
+}
+header .info .station-list .item4{
+	background-image: url(images/status/status4.png);
+}
+header .info .station-list li:hover{
+	background-color: #9393FF;
+}
+header .info .details a:hover{
+	background-color: #9D9D9D;
+}
+header .info .details div{
+	width: 100%;
+	height: 22px;
+	line-height: 22px;
+}
+header .info .details div input{
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	border: none;
+	background-color: rgba(0,0,0,0);
+/*	position: relative;*/
+	padding-left: 2px;
+}
+header .info .details div.text2:hover{
+	border: 1px solid #9D9D9D;
+}
+header .info .details .tool{
+	width: 100%;
+	height: 20px;
+	overflow: hidden;
+}
+header .info .details .tool-list {
+	width: 9999px;
+	height: 20px;
+}
+header .info .details .tool-list li{
+	float: left;
+	margin-right: 6px;
+}
+header .details .tool-list a{
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+header .details .tool-list a:hover{
+	background-color: #ADADAD;
+}
+header .details .tool-list .blog{
+	background-image: url(images/tool/blog.png);
+}
+header .details .tool-list .mail{
+	background-image: url(images/tool/mail.png);
+}
+header .details .tool-list .camera{
+	background-image: url(images/tool/camera.png);
+}
+header .details .tool-list .folder{
+	background-image: url(images/tool/folder.png);
+}
+header .details .tool-list .heart{
+	background-image: url(images/tool/heart.png);
+}
+header .details .tool-list .attention{
+	background-image: url(images/tool/attention.png);
+}
+header .details .tool .add{
+	background-image: url(images/tool/add.png);
+}
+header .search{
+	width: 100%;
+	height: 30px;
+	background-color: rgba(100,100,100,0.3);
+	border: none;
+	margin-top: 15px;
+	padding-left: 20px;	
+}
+header .search::-webkit-input-placeholder{
+	color: #fff;
+}
+/**********中部*********/
+.search-area{
+	width: 100%; 
+	min-height: 335px;
+	position: relative;
+	overflow: auto;
+}
+section .search-area{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+section .top-list{
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 2px solid #CECEFF;
+}
+section .top-list .item{
+	flex-grow: 1;
+	padding: 5px;
+	margin-bottom: -2px;
+}
+
+/*
+ 谷歌和360下，当宽度最小时，li标签宽度表现不一致，
+ 最后一个li标签右边距不一致导致在360下会换行
+ section .top-list .item{
+	display: inline-block;
+	width: 22%;
+	height: 38px;
+	padding-top: 9px;    
+	position: relative;
+}*/
+section .top-list li em{
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-left: 50%;
+	transform: translate(-10px);
+	position: relative;
+}
+section .top-list .friend{
+	background: url(images/pic1.png) no-repeat center;
+	background-size: cover;
+}
+section .top-list .club{
+	background: url(images/pic2.jpg) no-repeat center;
+	background-size: cover;
+}
+section .top-list .Qzone{
+	background: url(images/pic3.jpg) no-repeat center;
+	background-size: cover;
+}
+section .top-list .charting{
+	background: url(images/pic4.jpg) no-repeat center;
+	background-size: cover;
+}
+section .top-list .active{
+	border-bottom: 2px solid #6A6AFF;
+}
+section .top-list .circle{
+	width: 0;
+	height: 0;
+	border-top: 10px solid black;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	position: absolute;
+	left: 25px;
+	top: 5px;
+	display: none;
+}
+section .top-list .details {
+	display: none;
+	width: 120px;
+	border: 1px solid #BEBEBE;
+	background-color: #FCFCFC;
+	padding: 10px;
+	position: absolute;
+	left: 80px;
+	top: 38px;
+	text-align: center;
+}
+section .top-list .details li{
+	margin-bottom: 10px;
+}
+section .area{
+	padding-left: 20px;
+}
+section .area li{
+	margin-bottom: 10px;
+}
+section .area .second{
+	display: none;
+}
+/**********底部*********/
+footer{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	border-top: 1px solid #d0d0d0;
+}
+footer  li{
+	display: inline-block;
+}
+footer  li a{
+	display: block;
+	width: 30px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+footer .bottom-left{
+	float: left;
+}
+footer .bottom-left .menu{
+	background-image: url(images/footer/menu.png);
+}
+footer .bottom-left .bottom-search{
+	background-image: url(images/footer/search.png);
+}
+footer .bottom-right{
+	float: right;
+}
+footer .bottom-right .blog{
+	background-image: url(images/tool/blog.png);
+}
+footer .bottom-right .mail{
+	background-image: url(images/tool/mail.png);
+}
+footer .bottom-right .camera{
+	background-image: url(images/tool/camera.png);
+}
+footer .bottom-right .add{
+	background-image: url(images/tool/add.png);
+}
+footer li:hover{
+	background-color: #ADADAD;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>面向对象下拉框联动</title>
+</head>
+<body>
+    <div id="container"></div>
+	<script type="text/javascript">
+    function Sl(id){
+        this.oParent=document.getElementById(id);
+        this.data={};
+        this.selects=document.getElementsByTagName("select");
+    }
+    Sl.prototype={
+        constructor: Sl,
+        add: function(key,value){
+            this.data[key]=value;
+        },
+        init:function(num){
+            for(var i=0;i<num;i++){
+                var that=this; //change方法在实例上，而change方式是通过回调调用，所以保存防止this丢失
+                var sel=document.createElement("select");
+                var opt=document.createElement("option");
+                opt.innerHTML="默认";
+                sel.appendChild(opt);
+                this.oParent.appendChild(sel);
+                sel.index=i;
+                sel.onchange=function(){
+                    that.change(this.index);
+                }
+            }
+            this.first();
+        },
+        //下拉框联动
+        change: function(pos){
+            if(pos<this.selects.length-1){  //这里必须做一个判断，保证str的长度值在3位数之内，即保证str的长度不会超过选择框的个数，因为超过的话读取不了length属性，会报错
+                var str="1";
+                for(var i=0;i<=pos;i++){
+                    str=str+"-"+this.selects[i].selectedIndex;
+                }
+                console.log(str);
+
+                if(this.data[str]){
+                    this.selects[pos+1].options.length=1;
+                    var arr=this.data[str];
+                    for(var i=0;i<arr.length;i++){
+                        var opt=document.createElement("option");
+                        opt.innerHTML=arr[i];
+                        this.selects[pos+1].appendChild(opt);
+                    }
+                    pos++;
+                    this.selects[pos].options[1].selected=true;
+                    if(pos<this.selects.length){
+                        this.change(pos);
+                    }
+                }else{
+                    for(var i=pos;i<this.selects.length-1;i++){
+                    //这里减去1也是防止报错，如果不减1的话，i最大值可以取2，而下面就是会出现selects[3]，因为不存在，所以报错
+                        this.selects[i+1].options.length=1;
+                     }  
+                }
+            }     
+        },
+        //第一个下拉框值必须先初始化出来
+        first: function(){
+            var arr=this.data[1];
+            for(var i=0;i<arr.length;i++){
+                var opt=document.createElement("option");
+                opt.innerHTML=arr[i];
+                this.selects[0].appendChild(opt);
+            } 
+        }
+    };
+    var sl=new Sl("container");
+    sl.add("1",["湖南","江西","安徽"]);
+    sl.add("1-1",["长沙","株洲","岳阳"]);
+    sl.add("1-1-1",["无心区","芙蓉区","开福区"]);
+    sl.add("1-1-2",["天元区","荷塘区","石峰区"]);
+    sl.add("1-1-3",["岳阳楼区","君山区","洞口县"]);
+    sl.add("1-2",["南昌","九江","赣州"]);
+    sl.add("1-2-1",["东湖区","西湖区","安义县"]);
+    sl.add("1-2-2",["浔阳区","九江县","武宁县"]);
+    sl.add("1-2-2",["南康区","信丰县","全南县"]);
+    sl.add("1-3",["安庆","合肥","芜湖"]);
+    sl.add("1-3-1",["迎江区","宜秀区","大观区"]);
+    sl.add("1-3-2",["蜀山区","包河区","肥西县"]);
+    sl.add("1-3-3",["三山区","无为县","芜湖县"]);
+    sl.init(3);
+	</script>
+</body>
+</html>
